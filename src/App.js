@@ -69,7 +69,7 @@ const App = () => {
 
   const handleAddTodo = (text) => {
     const newTodo = {
-      id: todos.length + 1, // This might cause issues with duplicate IDs if todos are deleted
+      id: todos.length + 1, 
       text,
       completed: false
     };
@@ -84,9 +84,9 @@ const App = () => {
         <p>Loading...</p>
       ) : (
         <ul>
-          {todos.map((todo, index) => ( // Use index as key
+          {todos.map((todo, index) => (
             <TodoItem
-              key={index} // Use index as key
+              key={index} 
               todo={todo}
               onToggleComplete={handleToggleComplete}
               onDelete={handleDeleteTodo}
